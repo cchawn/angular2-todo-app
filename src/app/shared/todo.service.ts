@@ -16,10 +16,10 @@ export class TodoService {
   }
 
   addTodo(todo: Todo): void {
-      var newTodo: Todo = {
+      let newTodo: Todo = {
           done: todo.done,
           text: todo.text
-      }
+      };
       this.todos.push(newTodo);
   }
 }

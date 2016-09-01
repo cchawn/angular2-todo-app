@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
     this.newTodo.text = '';
   }
 
-  getTodos(): void{
+  getTodos(): void {
     this.todos = this.todoService.getTodos();
   }
 
