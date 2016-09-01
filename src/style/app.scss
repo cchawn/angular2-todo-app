@@ -1,8 +1,15 @@
-// styles in src/style directory are applied to the whole page
+$primary-color: #0147A7;
+$accent-color: #FFEF00;
+$link-color: #03A9F4;
+$text-color: #FFF;
+
 body {
-    background: #0147A7;
-    color: #fff;
+    background: $primary-color;
+    color: $text-color;
 }
 a {
-    color: #03A9F4;
+    color: $link-color;
+    &:hover{
+    	color: lighten($link-color, 20%); // doesn't like decimals
+    }
 }

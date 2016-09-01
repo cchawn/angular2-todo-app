@@ -1,4 +1,37 @@
-// component styles are encapsulated and only applied to their components
+$primary-color: #0147A7;
+$accent-color: #FFEF00;
+$link-color: #03A9F4;
+$text-color: #FFF;
+
 * {
-  color: #FFEF00;
+  color: $text-color;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+  text-align: left;
+  background-color: $text-color;
+  border-radius: 5px;
+  li {
+    border-bottom: 1px solid darken($text-color, 20%);
+    &:first-of-type, &:last-of-type { border-bottom: none; }
+    button.btn-primary {
+      border-radius: 5px 0 0 0;
+    }
+    .input-group .form-control{
+      border-radius: 0 5px 0 0;
+    }
+    label{
+      color: darken($text-color, 100%);
+      margin-bottom: 0;
+      input[type="checkbox"]{
+        margin: 10px 24px;
+      }
+    }
+    &.done label{
+        text-decoration: line-through;
+        color: darken($text-color, 40%);  
+    }   
+  } 
 }

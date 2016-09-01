@@ -1,3 +1,24 @@
-<p>
-  Home Works!
-</p>
+<div class="container">
+  <h2>Todos</h2>
+  <ul>
+    <li>
+      <form (ngSubmit)="addTodo()">
+        <div class="input-group">
+          <span class="input-group-btn">
+            <button class="btn btn-primary" type="submit">Add</button>
+          </span>
+          <input class="form-control" placeholder="add a todo" [(ngModel)]="newTodo.text" name="text">
+        </div>  
+      </form>
+    </li>
+    <li
+      *ngFor="let todo of todos"
+      [class.done]="todo.done">
+      <label>
+        <input type="checkbox"
+          [(ngModel)]="todo.done">
+        {{todo.text}}
+      </label>
+    </li>
+  </ul>
+</div>
